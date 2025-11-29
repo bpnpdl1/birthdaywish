@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Binita Gurung!</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- JS LIBRARIES FOR "WOW" FACTOR -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        /* Floating Blobs Animation */
+        .blob-bg {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            opacity: 0.5;
+            animation: floatBlob 10s infinite alternate;
+        }
+        @keyframes floatBlob {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(20px, -20px) scale(1.1); }
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased" 
+      x-data="{ 
+          loveCount: 0,
+          launchConfetti() {
+              confetti({
+                  particleCount: 150,
+                  spread: 70,
+                  origin: { y: 0.6 },
+                  colors: ['#FDB913', '#FF69B4', '#22c55e'] // Marigold Yellow, Pink, Leaf Green
+              });
+          }
+      }" 
+      x-init="launchConfetti()">
+
+    <!-- Animated Backgrounds -->
+    <div class="blob-bg bg-yellow-300 w-96 h-96 top-0 left-0 mix-blend-multiply"></div>
+    <div class="blob-bg bg-green-300 w-96 h-96 top-0 right-0 mix-blend-multiply animation-delay-2000"></div>
+    <div class="blob-bg bg-pink-200 w-80 h-80 bottom-0 left-20 mix-blend-multiply animation-delay-4000"></div>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex flex-col justify-center items-center relative px-4">
+        <div class="text-center z-10 max-w-4xl mx-auto">
+            
+            <!-- Profile Image (Tilt Effect) -->
+            <div class="mb-8 relative inline-block group" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+                <div class="absolute -inset-2 bg-gradient-to-r from-yellow-400 to-green-500 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                <img src="./img1.jpg" alt="Binita" class="relative w-56 h-56 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-2xl">
+            </div>
+
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 text-slate-800 tracking-tight" data-aos="fade-up">
+                Binita Gurung
+            </h1>
+
+            <!-- Typewriter Effect -->
+            <div class="h-10 text-xl md:text-3xl text-stone-600 font-light mb-8" data-aos="fade-up" data-aos-delay="200">
+                Is a <span class="text-green-600 font-semibold" id="typed-text"></span>
+            </div>
+
+            <button @click="launchConfetti()" class="px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full font-semibold shadow-lg hover:shadow-green-500/50 hover:-translate-y-1 transition-all duration-300">
+                🌻 Send Birthday Wishes
+            </button>
+        </div>
+
+        <div class="absolute bottom-10 animate-bounce text-stone-400">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
+
+    <!-- TRAITS SECTION -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-stone-800 mb-2">A Beautiful Soul</h2>
+            <div class="h-1 w-24 bg-green-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: Social Worker -->
+            <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-white hover:border-pink-300 transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-5xl mb-6">🤝</div>
+                <h3 class="text-2xl font-bold mb-3 text-stone-800">Social Worker</h3>
+                <p class="text-stone-600 leading-relaxed">Dedicated to volunteering and guiding the young generation. She builds a better society with her kindness and actions.</p>
+            </div>
+
+            <!-- Card 2: Planter (Updated) -->
+            <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-white hover:border-yellow-400 transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-5xl mb-6">🌻</div>
+                <h3 class="text-2xl font-bold mb-3 text-stone-800">Awesome Planter</h3>
+                <p class="text-stone-600 leading-relaxed">She has a magical green thumb! From blooming Marigolds to caring for nature, she makes the world greener and brighter.</p>
+            </div>
+
+            <!-- Card 3: Cat Lover -->
+            <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-white hover:border-indigo-300 transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-5xl mb-6">😺</div>
+                <h3 class="text-2xl font-bold mb-3 text-stone-800">Cat Lover</h3>
+                <p class="text-stone-600 leading-relaxed">Smart, beautiful, and compassionate. Her love for animals shows just how big her heart truly is.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO STORY SECTION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 space-y-24">
+            
+            <!-- Story 1: Volunteering/Work -->
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2" data-aos="fade-right">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+                        <img src="./img3.jpeg" alt="Binita Volunteering" class="w-full h-[500px] object-cover transform group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition"></div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2" data-aos="fade-left">
+                    <h3 class="text-4xl font-bold mb-6 text-stone-800">Empowering the Youth</h3>
+                    <p class="text-lg text-stone-600 leading-loose">
+                        Binita isn't just a presence; she is an impact. Whether she is in a meeting planning social welfare events or out in the field volunteering, she inspires the young ones to do better.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Story 2: Nature/River -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                <div class="w-full md:w-1/2" data-aos="fade-left">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+                        <img src="./nature.jpg" alt="Binita Nature" class="w-full h-[500px] object-cover transform group-hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 text-right md:text-right" data-aos="fade-right">
+                    <h3 class="text-4xl font-bold mb-6 text-stone-800">Nature's Best Friend</h3>
+                    <p class="text-lg text-stone-600 leading-loose">
+                        When she plants a marigold, she plants hope. Her connection with nature, from the riverside to her garden, reflects her inner beauty and peace.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Fun Picture Centered -->
+            <div class="text-center py-10" data-aos="zoom-in">
+                <div class="inline-block relative">
+                    <img src="./first.jpeg" alt="Number 1" class="rounded-full w-64 h-64 object-cover border-8 border-stone-100 shadow-2xl">
+                    <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-yellow-900 px-6 py-2 rounded-full font-bold shadow-lg whitespace-nowrap">
+                        Always #1 ✨
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERACTIVE WISH SECTION -->
+    <section class="py-24 bg-gradient-to-br from-green-50 to-yellow-50 text-center px-4">
+        <h2 class="text-3xl md:text-5xl font-bold mb-8 text-stone-800">Send Binita some Birthday Love!</h2>
+        
+        <button @click="loveCount++; launchConfetti()" 
+                class="group relative inline-flex items-center justify-center overflow-hidden rounded-full p-4 md:p-6 bg-white shadow-2xl transition-all hover:scale-110 active:scale-95">
+            <span class="text-4xl md:text-6xl group-hover:animate-bounce">❤️</span>
+        </button>
+        
+        <div class="mt-8 h-8">
+            <p x-show="loveCount > 0" x-transition class="text-xl md:text-2xl font-medium text-pink-600">
+                You sent <span x-text="loveCount" class="font-bold"></span> hearts!
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 py-12 text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <p class="font-playfair text-2xl text-white italic mb-8">"Keep blooming like your marigolds and shining like the star you are."</p>
+            
+            <a href="https://www.facebook.com/binita.gurung.809529" target="_blank" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <span>Wish her on Facebook</span>
+            </a>
+            
+            <p class="mt-8 text-sm opacity-50">Designed for Binita's Special Day</p>
+        </div>
+    </footer>
+
+    <!-- INITIALIZE LIBRARIES -->
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Typewriter
+        new Typed('#typed-text', {
+            strings: ['Social Worker', 'Cat Lover', 'Marigold Planter', 'Community Hero'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        });
+    </script>
+</body>
+</html>
